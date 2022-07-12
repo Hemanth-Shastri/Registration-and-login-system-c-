@@ -12,7 +12,6 @@ bool loggedIn(){
     cout << endl << "password : " ;
     cin >> password;
 
-
     ifstream read("data\\" + username + ".txt");
 
     getline(read, USERNAME);
@@ -31,13 +30,13 @@ bool loggedIn(){
 void changePassword(){
     string  username, password;
 
-     cout<< "Enter your username : " ; cin >> username ;
+    cout<< "Enter your username : " ; cin >> username ;
     cout<< "Enter new password : " ; cin >> password;
 
     ifstream file;
     file.open("data\\" + username + ".txt");
     if(file){
-
+        
         ofstream file;
         file.open("data\\" + username + ".txt");
         file  << username << endl << password;
